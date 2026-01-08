@@ -4,9 +4,28 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Counter App</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+      @utility btn {
+        @apply bg-slate-700 cursor-pointer text-xl font-bold text-white border-neutral-600 text-center px-3 py-1 rounded-md flex justify-center items-center;
+      }
+    </style>
   </head>
   <body>
-    <h1>Counter App</h1>
+    <div class="h-screen w-full flex justify-center items-center">
+      <div
+        class="flex flex-col justify-center items-center gap-10 px-20 py-10 border-2 rounded-2xl"
+      >
+        <h1 class="text-5xl font-semibold">Counter App</h1>
+        <input class="px-4 py-2 border rounded-xl" id="input" type="number" />
+        <span class="text-red-600 hidden" id="error"></span>
+        <div class="flex gap-6 justify-center items-center">
+          <button id="minusBtn" class="btn">-</button>
+          <span id="output">0</span>
+          <button id="addBtn" class="btn">+</button>
+        </div>
+      </div>
+    </div>
     <script src="./script.js"></script>
   </body>
 </html>
